@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+	<!-- en-tete du document -->
+	<!--<link rel="stylesheet" href="style.css"></link>-->
+	<title>Cosmic Mahyem</title>
+	<link rel="stylesheet" href="/style.css"></link>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+	<script src="/sandmin.js"></script>
+	<script src="/jquery.js"></script>
+	<script src="/toDOM.js"></script>
+	<script src="/Seed.js"></script>
+	
+	<script src="/Planet.js"></script>
+	<script src="/UI_bar.js"></script>
+	<script src="/Species.js"></script>
+	<script src="/Civilization.js"></script>
+	<script src="/Power.js"></script>
+	<script src="/Event.js"></script>
+	<script src="/System.js"></script>
+	<script src="/Star.js"></script>
+	<script src="/God.js"></script>
+	<script src="/Creation.js"></script>
+	<script src="/Display.js"></script>
+	<script src="/Panel.js"></script>
+	<script src="/Frame.js"></script>
+	<script src="/View.js"></script>
+
+	<script type="text/javascript">
+	var display;
+	var planet;
+	var panel;
+	var frame;
+	var view;
+	var UIbar;
+
+  sand.require('Cosmic/*', function (r) {
+  	planet = new r.Cosmic.Planet();
+  	panel = new r.Cosmic.Panel();
+  	frame = new r.Cosmic.Frame({type : 'two-third'});
+  	UIbar = new r.Cosmic.UI_bar({elements : [{name : 'fire'},{name : 'water'},{name : 'lightning'},{name : 'wind'},{name : 'earth'}]});
+  	frame.stick(UIbar);
+  	frame.stick(planet);
+
+  	display = new r.Cosmic.Display({ type : 'figure:legend' ,frame : frame, panel : panel});
+  	view = new r.Cosmic.View();
+  	view.stick(display);
+  	view.load();
+  })
+	</script>
+</body>
+</html>
