@@ -22,6 +22,5 @@ sand.define('Cosmic/Star', function () {
 
     },
 
-    fr
   })
 })
