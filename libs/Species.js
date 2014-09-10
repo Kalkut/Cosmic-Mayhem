@@ -1,4 +1,5 @@
-sand.define('Cosmic/Species', function () {
+sand.define('Cosmic/Species',['Cosmic/functions'], function (r) {
+  var functions = r.functions;
   return Seed.extend({
     '+init' : function (species) {
       if(!species) var species = {};
@@ -20,8 +21,11 @@ sand.define('Cosmic/Species', function () {
       this.hunger = species.hunger;
     },
 
-    fight : function () {
-
+    fight : function (enemy) {
+      /*if(functions.skillTest(this,aggro))*/
+      if(this.strength > enemy.strength){
+        //if(functions.skillTest(this,"strength")
+      }
     },
 
     feed : function () {
@@ -35,6 +39,14 @@ sand.define('Cosmic/Species', function () {
     spread : function () {
 
     },
+
+    move : function () {
+
+    },
+
+    escape : function () {
+
+    }
     
   })
 })

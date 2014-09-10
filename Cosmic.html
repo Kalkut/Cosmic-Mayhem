@@ -28,6 +28,7 @@
 	<script src="/Panel.js"></script>
 	<script src="/Frame.js"></script>
 	<script src="/View.js"></script>
+  <script src="/functions.js"></script>
 
 	<script type="text/javascript">
 	var display;
@@ -36,8 +37,10 @@
 	var frame;
 	var view;
 	var UIbar;
+  var functions;
 
   sand.require('Cosmic/*', function (r) {
+    functions = r.Cosmic.functions;
   	planet = new r.Cosmic.Planet();
   	panel = new r.Cosmic.Panel();
   	frame = new r.Cosmic.Frame({type : 'two-third'});
